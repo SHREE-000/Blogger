@@ -1,0 +1,1 @@
+export { UpdateBlog } from "./Component";

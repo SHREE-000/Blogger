@@ -1,0 +1,11 @@
+export const CREATE_BLOG = "Create New Blog";
+export const BLOG_LOCATION = "LOCATION";
+export const BLOG_TITLE = "TITLE";
+export const BLOG_TOPIC = "TOPIC";
+export const BLOG_DESC = "DESCRIPTION";
+export const DESC_PLACEHOLDER = "Enter description";
+export const TITLE_PLACEHOLDER = "Enter title";
+export const TOPIC_PLACEHOLDER = "Enter topic";
+export const BLOG_MEDIA = "MEDIA";
+export const MEDIA_ERROR = "Please add an image file";
+export const UPDATE_BLOG = "Update The Blog";

@@ -1,0 +1,15 @@
+export const ALL_BLOGS = "/allblogs";
+export const AUTH_URL = "/api/auth";
+export const BACKEND_BASE_URL = "http://localhost:3002";
+export const BLOG_CREATE_URL = "/createblog";
+export const BLOG_DELETE = "/blogdelete";
+export const BLOG_LIMIT = "/blogs";
+export const BLOG_SINGLE = "/blogsingle";
+export const BLOG_UPDATE = "/blogupdate";
+export const BLOG_URL = "/api/blog";
+export const BLOG_USER = "/bloguser";
+export const CONTACT_URL = "/api/contact";
+export const CONTACT_US = "/contactus";
+export const FILTERED_BLOGS = "/filteredblogs";
+export const LOGIN_URL = "/login";
+export const REGISTER_URL = "/register";

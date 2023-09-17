@@ -1,0 +1,91 @@
+$flex: flex;
+$white-color: white;
+$none: none;
+$pointer: pointer;
+$fiftypx: 50px;
+$full-percent: 100%;
+$zero: 0;
+$fivePx: 5px;
+
+img {
+  width: 100%;
+  height: 60vh;
+}
+
+.filter-blogs {
+  width: 390px;
+  display: $flex;
+  justify-content: space-between;
+  height: 7vh;
+  margin-top: 2%;
+  margin-left: 7%;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 15%;
+  }
+}
+
+.pagination {
+  display: $flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  div {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    .disabledPrev,
+    .disabledNext {
+      background-color: #f0f0f0;
+    }
+  }
+
+  div.active,
+  div:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .prev:hover,
+  .next:hover {
+    cursor: pointer;
+  }
+
+  .prev,
+  .next {
+    font-weight: bold;
+  }
+
+  .page:hover {
+    cursor: pointer;
+  }
+}
+
+.outer-box-home {
+  display: $flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.pagination div.disabledPrev,
+.pagination div.disabledNext {
+  background-color: #f0f0f0;
+}
+
+.no-search {
+  color: red;
+  display: flex;
+  justify-content: center;
+}

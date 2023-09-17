@@ -1,0 +1,154 @@
+$flex: flex;
+$white-color: white;
+$none: none;
+$pointer: pointer;
+$fiftypx: 50px;
+$full-percent: 100%;
+$zero: 0;
+$fivePx: 5px;
+
+nav {
+  background-color: #333;
+  height: 100px;
+  display: $flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  .logo-img {
+    height: 9vw;
+    width: 9vw;
+    cursor: pointer;
+
+    @media (max-width: 748px) {
+      height: 15vw !important;
+      width: 15vw !important;
+    }
+
+    @media (max-width: 544px) {
+      height: 18vw !important;
+      width: 18vw !important;
+    }
+
+    @media (max-width: 380px) {
+      height: 22vw !important;
+      width: 22vw !important;
+    }
+  }
+
+  .home {
+    margin-bottom: 50px;
+  }
+}
+
+.menu-icon {
+  color: $white-color;
+  font-size: 1.5rem;
+  cursor: $pointer;
+  display: $none;
+}
+
+.menu {
+  display: $flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: $none;
+  margin-top: $fiftypx;
+  padding: $zero;
+
+  li {
+    display: block;
+    color: $white-color;
+    text-align: center;
+    padding: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: $none;
+
+    select {
+      margin-top: 15px;
+    }
+
+    .dropdown-nav {
+      cursor: pointer;
+    }
+
+    .link-router-dom {
+      text-decoration: $none;
+      color: $white-color;
+    }
+
+    .nav-option {
+      color: rgb(248, 158, 158);
+    }
+
+    .signIn {
+      color: black;
+      background-color: white;
+    }
+  }
+
+  li:hover {
+    cursor: $pointer;
+  }
+}
+
+@media (max-width: 742px) {
+  .menu-icon {
+    display: block;
+    padding-right: 10%;
+  }
+
+  .second-ul-auth {
+    border-top: 1px solid #444;
+    margin-top: 280px !important;
+  }
+
+  .second-ul-no-auth {
+    border-top: 1px solid #444;
+    margin-top: 222px !important;
+  }
+
+  .menu {
+    position: absolute;
+    top: $fiftypx;
+    left: $zero;
+    width: $full-percent;
+    flex-direction: column;
+    background-color: #222;
+    display: $none;
+    margin-bottom: 25px;
+
+    li {
+      width: $full-percent;
+      border-bottom: 1px solid #444;
+      height: 25px;
+
+      select {
+        margin-top: 0;
+        width: 150px;
+      }
+
+      .navbar-dropdown {
+        width: 25% !important;
+      }
+    }
+
+    li:last-child {
+      border-bottom: $none;
+    }
+  }
+
+  .menu-open {
+    display: $flex !important;
+    align-items: center;
+  }
+}
+
+@media (max-width: 544px) {
+  .logo-img {
+    height: 18vw !important;
+    width: 18vw !important;
+  }
+}

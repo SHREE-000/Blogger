@@ -1,0 +1,1 @@
+export { ShowOneFullBlog } from "./Component";

@@ -1,0 +1,42 @@
+.alert {
+  padding: 16px;
+  background-color: #f44336;
+  color: white;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.alert-close:hover {
+  color: black;
+}
+
+.alert {
+  p {
+    margin: 0;
+  }
+}
+
+.alert-success {
+  background-color: #4caf50;
+}
+
+.alert-info {
+  background-color: #2196f3;
+}
+
+.alert-warning {
+  background-color: #ff9800;
+}
+
+.alert-danger {
+  background-color: #f44336;
+}

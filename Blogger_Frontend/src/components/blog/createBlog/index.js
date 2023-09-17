@@ -1,0 +1,1 @@
+export { CreateBlog } from "./Component";
