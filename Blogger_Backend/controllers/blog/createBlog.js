@@ -21,13 +21,13 @@ export const createBlog = async(req, res) => {
             media: contents,
             title,
             topic,
-            userId: req.user?.userId,
+            userId: req.user?.userId
         });
 
         return res.status(201).json(blog);
         
-    } catch (error) {
-        console.log(error);
+    } catch (err) {
+        console.log(err);
         res.status(500).send("Failed, please try later")
     }
 }

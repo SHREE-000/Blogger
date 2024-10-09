@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import { config } from "dotenv";
 config();
 
-const port = process.env.MONGO_URI
-
+const port = process.env.MONGO_URI_LOCAL;
   mongoose.connect(port, {
   useNewUrlParser: true,
   useUnifiedTopology: true
