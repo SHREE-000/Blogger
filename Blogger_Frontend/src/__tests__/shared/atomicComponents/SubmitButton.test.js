@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen, render, fireEvent } from '@testing-library/react';
 import { SubmitButton } from '../../../components/shared/components/atomicComponents/SubmitButton';
-
+ 
 describe("Button", () => {
     test('calls onClick function when button is clicked', () => {
         const onClickMock = jest.fn();
