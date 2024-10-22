@@ -1,0 +1,52 @@
+version: '1' # docker compose version
+services:  # services which are going to use
+  mongoDB: # container name
+    image: mongo # name of image that going to build
+    ports:
+      - 2707:2707
+    networks:
+      - blogger
+    volumes: 
+      - mongo-data:/data/db  
+
+  blogger-backend: 
+    build:  # build the docker image for the service using the dockerfile located in the  current directory
+      context: ./Blogger_Backend
+      dockerfile: Dockerfile
+    ports:
+      - 3002:3002
+    environment:
+      - MONGO_URI_LOCAL=mongodb://mongoDB:27017/blogger_app
+      - MONGO_URI_EXTENTED=mongodb+srv://shreeharicr:fLJvOUzw0OnY5JbQ@cluster0.mongodb.net/blogger_app?authSource=admin&compressors=zlib&retryWrites=true&w=majority&ssl=true
+      - MONGO_URI=mongodb+srv://shreeharicr:fLJvOUzw0OnY5JbQ@cluster0.a1wl5p9.mongodb.net/?retryWrites=true&w=majority
+      - PORT=3002
+      - JWT_SECRET_KEY=secret_key
+      - SENDER_EMAIL=sameeramp2000@gmail.com
+      - SENDER_EMAIL_PASS=sami@7402
+      - TO_EMAIL=shreehari000@gmail.com
+      - GMAIL_APP_PASSWORD=fiue cugr mjba cetd
+      - CC_EMAIL1=smilishsh@gmail.com
+      - CC_EMAIL2=eatwithme027@gmail.com  
+    networks:
+      - blogger
+    depends_on: # adding network
+      - mongoDB
+
+  blogger-frontend:
+    build:
+      context: ./Blogger_Frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - blogger
+    depends_on:
+      - blogger-backend
+
+networks: # allow services to talk to each other while providing isolation from other docker container, running on the same host
+  blogger:
+    driver: bridge
+
+volumes: # enable persistence of database data across container restart
+  mongo-data:
+    driver: local
